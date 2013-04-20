@@ -1,6 +1,13 @@
 html, body {
 	height: 100%;
 }
+.fixed {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
 .map {
 	position: absolute;
 	width: 100%;
@@ -19,14 +26,15 @@ html, body {
 	right: 20px;
 }
 .scroll-pane {
-	position: absolute;
+	position: relative;
 	left: 20px;
-	width: 300px;
-	height: 100%;
-	overflow-y: auto;
+	width: 33.3333%;
+	min-width: 320px;
+	padding-top: 20px;
 	}
-	.scroll-pane section {}
-	.scroll-pane section.active,
-	.scroll-pane section:hover {
-		background: #DDD;
+	.scroll-pane section {
+		padding: 40px;
+	}
+	.scroll-pane section.active {
+		background: rgba(0,0,0,.25);
 	}
