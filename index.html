@@ -1,18 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
     <title>Tracking Curiosity</title>
     
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
+	<!--[if lte IE 8]>
+	    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
+	<![endif]-->
+	<link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
+
 </head>
 <body>
-	
+	<div class="map"></div>
+	<div class="graph"></div>
+	<div class="scroll-pane">
+		<section>
+			<h3>Drive 42</h3>
+			<div class="distance-traveled">Distance Traveled: <span>10.6m</span></div>
+			<div class="duration">Duration: <span>140s</span></div>
+			<div class="elevation">Elevation: <span>180m</span></div>
+		</section>
+		<section>
+			<h3>Drive 41</h3>
+			<div class="distance-traveled">Distance Traveled: <span>10.6m</span></div>
+			<div class="duration">Duration: <span>140s</span></div>
+			<div class="elevation">Elevation: <span>180m</span></div>
+		</section>
+	</div>
 
 	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
