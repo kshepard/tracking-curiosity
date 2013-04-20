@@ -7,34 +7,51 @@ html, body {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-}
-.map {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	display: block;
-	background: #EEE;
-	margin: 0;
-	padding: 0;
-}
-.graph {
-	position: absolute;
-	width: 300px;
-	height: 180px;
-	background: #666;
-	bottom: 20px;
-	right: 20px;
-}
+	}
+	.map {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: block;
+		background: #EEE;
+		margin: 0;
+		padding: 0;
+	}
+	.graph {
+		position: absolute;
+		width: 300px;
+		height: 180px;
+		background: #666;
+		bottom: 20px;
+		right: 20px;
+	}
+	
 .scroll-pane {
 	position: relative;
 	left: 20px;
 	width: 33.3333%;
 	min-width: 320px;
 	padding-top: 20px;
+	padding-bottom: 33.33%;
 	}
 	.scroll-pane section {
 		padding: 40px;
-	}
+		text-shadow: 0 0 5px #000;
+		opacity: .65;
+		}
+		.scroll-pane section h3 {
+			margin-top: 0;
+		}
+		.scroll-pane section:first-child {
+			margin-top: 33.33%;
+		}
 	.scroll-pane section.active {
-		background: rgba(0,0,0,.25);
+		background: rgba(0,0,0,.35);
+		text-shadow: none;
+		opacity: 1;
+		color: white;
 	}
+		.scroll-pane section.active h3 {
+			margin-top: 0;
+			color: white;
+		}
