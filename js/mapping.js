@@ -38,8 +38,12 @@
                     format: new OpenLayers.Format.GeoJSON()
                 })
             }),
+            driveStyle = new OpenLayers.StyleMap(OpenLayers.Util.applyDefaults({
+                fill: true, fillColor: 'blue', fillOpacity: 0.2, strokeOpacity: 0.6, strokeColor: 'black', pointRadius: 5
+            }, OpenLayers.Feature.Vector.style['default'])),
             driveLayer = new OpenLayers.Layer.Vector("Drive", {
                 strategies: [new OpenLayers.Strategy.Fixed()],
+                styleMap: driveStyle,
                 protocol: new OpenLayers.Protocol.HTTP({
                     url: "data/drive.json",
                     format: new OpenLayers.Format.GeoJSON()
@@ -55,7 +59,9 @@
             
         map.addLayers([googlemars, hirise, trackLayer, driveLayer, markers]);
         map.zoomToExtent( mapBounds.transform(map.displayProjection, map.projection ) );
-        map.addControl(new OpenLayers.Control.ZoomPanel());
+        
+        // removing this for now until it can be styled better
+        //map.addControl(new OpenLayers.Control.ZoomPanel());
         map.addControl(new OpenLayers.Control.Navigation({ zoomWheelEnabled: false }));
         map.addControl(selectControl);
         selectControl.activate();
