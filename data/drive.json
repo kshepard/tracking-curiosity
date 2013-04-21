@@ -3,7 +3,7 @@
     "features": [
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15299708, -511704] },
+            "geometry": { "type": "Point", "coordinates": [15300567, -511698] },
             "properties" : {
                 "drive": "42",
                 "dist": "3.63",
@@ -16,7 +16,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15299727, -511694] },
+            "geometry": { "type": "Point", "coordinates": [15300570, -511703] },
             "properties" : {
                 "drive": "41",
                 "dist": "3.38",
@@ -29,7 +29,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15299756, -511691] },
+            "geometry": { "type": "Point", "coordinates": [15300577, -511688] },
             "properties" : {
                 "drive": "40",
                 "dist": "1.14",
@@ -42,7 +42,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15299773, -511710] },
+            "geometry": { "type": "Point", "coordinates": [15300589, -511665] },
             "properties" : {
                 "drive": "39",
                 "dist": "9.45",
@@ -55,7 +55,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15299810, -511750] },
+            "geometry": { "type": "Point", "coordinates": [15300587, -511664] },
             "properties" : {
                 "drive": "38",
                 "dist": "1.41",
@@ -68,7 +68,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15299854, -511790] },
+            "geometry": { "type": "Point", "coordinates": [15300589, -511697] },
             "properties" : {
                 "drive": "37",
                 "dist": "2.57",
@@ -81,7 +81,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15299906, -511800] },
+            "geometry": { "type": "Point", "coordinates": [15300599, -511731] },
             "properties" : {
                 "drive": "36",
                 "dist": "0.67",
@@ -94,7 +94,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15299959, -511794] },
+            "geometry": { "type": "Point", "coordinates": [15300577, -511744] },
             "properties" : {
                 "drive": "35",
                 "dist": "3.08",
@@ -107,7 +107,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300010, -511766] },
+            "geometry": { "type": "Point", "coordinates": [15300585, -511765] },
             "properties" : {
                 "drive": "34",
                 "dist": "22.41",
@@ -120,7 +120,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300057, -511749] },
+            "geometry": { "type": "Point", "coordinates": [15300570, -511786] },
             "properties" : {
                 "drive": "33",
                 "dist": "5.89",
@@ -133,7 +133,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300097, -511769] },
+            "geometry": { "type": "Point", "coordinates": [15300542, -511786] },
             "properties" : {
                 "drive": "32",
                 "dist": "33.59",
@@ -146,7 +146,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300125, -511814] },
+            "geometry": { "type": "Point", "coordinates": [15300527, -511810] },
             "properties" : {
                 "drive": "31",
                 "dist": "26.88",
@@ -159,7 +159,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300133, -511816] },
+            "geometry": { "type": "Point", "coordinates": [15300512, -511795] },
             "properties" : {
                 "drive": "30",
                 "dist": "16.31",
@@ -172,7 +172,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300143, -511811] },
+            "geometry": { "type": "Point", "coordinates": [15300509, -511764] },
             "properties" : {
                 "drive": "29",
                 "dist": "19.64",
@@ -185,7 +185,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300168, -511806] },
+            "geometry": { "type": "Point", "coordinates": [15300511, -511755] },
             "properties" : {
                 "drive": "28",
                 "dist": "0.94",
@@ -198,7 +198,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300196, -511801] },
+            "geometry": { "type": "Point", "coordinates": [15300488, -511765] },
             "properties" : {
                 "drive": "27",
                 "dist": "25.88",
@@ -211,7 +211,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300245, -511799] },
+            "geometry": { "type": "Point", "coordinates": [15300468, -511763] },
             "properties" : {
                 "drive": "26",
                 "dist": "36.90",
@@ -224,7 +224,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300313, -511792] },
+            "geometry": { "type": "Point", "coordinates": [15300475, -511763] },
             "properties" : {
                 "drive": "25",
                 "dist": "1.46",
@@ -237,7 +237,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300363, -511781] },
+            "geometry": { "type": "Point", "coordinates": [15300469, -511768] },
             "properties" : {
                 "drive": "24",
                 "dist": "27.31",
@@ -250,7 +250,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300393, -511774] },
+            "geometry": { "type": "Point", "coordinates": [15300448, -511778] },
             "properties" : {
                 "drive": "23",
                 "dist": "2.12",
@@ -276,7 +276,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300448, -511778] },
+            "geometry": { "type": "Point", "coordinates": [15300393, -511774] },
             "properties" : {
                 "drive": "21",
                 "dist": "1.74",
@@ -289,7 +289,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300469, -511768] },
+            "geometry": { "type": "Point", "coordinates": [15300363, -511781] },
             "properties" : {
                 "drive": "20",
                 "dist": "5.22",
@@ -302,7 +302,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300475, -511763] },
+            "geometry": { "type": "Point", "coordinates": [15300313, -511792] },
             "properties" : {
                 "drive": "19",
                 "dist": "25.21",
@@ -315,7 +315,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300468, -511763] },
+            "geometry": { "type": "Point", "coordinates": [15300245, -511799] },
             "properties" : {
                 "drive": "18",
                 "dist": "2.27",
@@ -328,7 +328,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300488, -511765] },
+            "geometry": { "type": "Point", "coordinates": [15300196, -511801] },
             "properties" : {
                 "drive": "17",
                 "dist": "37.74",
@@ -341,7 +341,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300511, -511755] },
+            "geometry": { "type": "Point", "coordinates": [15300168, -511806] },
             "properties" : {
                 "drive": "16",
                 "dist": "48.95",
@@ -354,7 +354,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300509, -511764] },
+            "geometry": { "type": "Point", "coordinates": [15300143, -511811] },
             "properties" : {
                 "drive": "15",
                 "dist": "30.70",
@@ -367,7 +367,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300512, -511795] },
+            "geometry": { "type": "Point", "coordinates": [15300133, -511816] },
             "properties" : {
                 "drive": "14",
                 "dist": "43.16",
@@ -380,7 +380,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300527, -511810] },
+            "geometry": { "type": "Point", "coordinates": [15300125, -511814] },
             "properties" : {
                 "drive": "13",
                 "dist": "4.63",
@@ -393,7 +393,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300542, -511786] },
+            "geometry": { "type": "Point", "coordinates": [15300097, -511769] },
             "properties" : {
                 "drive": "12",
                 "dist": "30.02",
@@ -406,7 +406,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300570, -511786] },
+            "geometry": { "type": "Point", "coordinates": [15300057, -511749] },
             "properties" : {
                 "drive": "11",
                 "dist": "32.00",
@@ -419,7 +419,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300585, -511765] },
+            "geometry": { "type": "Point", "coordinates": [15300010, -511766] },
             "properties" : {
                 "drive": "10",
                 "dist": "26.90",
@@ -432,7 +432,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300577, -511744] },
+            "geometry": { "type": "Point", "coordinates": [15299959, -511794] },
             "properties" : {
                 "drive": "9",
                 "dist": "37.27",
@@ -445,7 +445,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300599, -511731] },
+            "geometry": { "type": "Point", "coordinates": [15299906, -511800] },
             "properties" : {
                 "drive": "8",
                 "dist": "21.70",
@@ -458,7 +458,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300589, -511697] },
+            "geometry": { "type": "Point", "coordinates": [15299854, -511790] },
             "properties" : {
                 "drive": "7",
                 "dist": "32.32",
@@ -471,7 +471,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300587, -511664] },
+            "geometry": { "type": "Point", "coordinates": [15299810, -511750] },
             "properties" : {
                 "drive": "6",
                 "dist": "30.49",
@@ -484,7 +484,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300589, -511665] },
+            "geometry": { "type": "Point", "coordinates": [15299773, -511710] },
             "properties" : {
                 "drive": "5",
                 "dist": "29.91",
@@ -497,7 +497,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300577, -511688] },
+            "geometry": { "type": "Point", "coordinates": [15299756, -511691] },
             "properties" : {
                 "drive": "4",
                 "dist": "21.39",
@@ -510,7 +510,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300570, -511703] },
+            "geometry": { "type": "Point", "coordinates": [15299727, -511694] },
             "properties" : {
                 "drive": "3",
                 "dist": "15.07",
@@ -523,7 +523,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300567, -511698] },
+            "geometry": { "type": "Point", "coordinates": [15299708, -511700] },
             "properties" : {
                 "drive": "2",
                 "dist": "4.83",
@@ -536,7 +536,7 @@
         },
         {
             "type": "Feature",
-            "geometry": { "type": "Point", "coordinates": [15300559, -511700] },
+            "geometry": { "type": "Point", "coordinates": [15299708, -511704] },
             "properties" : {
                 "drive": "1",
                 "dist": "6.94",
