@@ -28,7 +28,7 @@ $(function(){
             var driveId = $active.data('drive-id');
             if (driveId !== undefined) {
                 var feature = drives[driveId];
-                $(document).trigger('drive-change', [driveId, feature.properties, feature.geometry.coordinates[0], feature.geometry.coordinates[1]]);
+                $(document).trigger('drive-change', [driveId, feature.properties, feature.geometry.coordinates[0], feature.geometry.coordinates[1], 'scroll']);
             }
 	}, {
   	    offset: '33.33%'
@@ -87,11 +87,11 @@ $(function(){
             .attr("y", function(d) { return y(d.elevation); })
             .attr("height", function(d) { return height - y(d.elevation); })
             .on('click', function(e) {
-                $(document).trigger('drive-change', [e.driveId, e.properties, e.geometry.coordinates[0], e.geometry.coordinates[1]]);                
+                $(document).trigger('drive-change', [e.driveId, e.properties, e.geometry.coordinates[0], e.geometry.coordinates[1], 'graph']);                
             });
 
         // listen for 'drive-change' events
-        $(document).bind('drive-change', function (e, drive, data, lon, lat) {
+        $(document).bind('drive-change', function (e, drive, data, lon, lat, triggeredBy) {
             // color the chart
             $('rect').each(function(i, r) {
                 if (parseInt(drive, 10) === $(r).data('drive-id')) {
@@ -100,6 +100,12 @@ $(function(){
                     $(r).attr('class', 'bar' + parseInt($(r).data('elevation'), 10));
                 }
             });
+
+            // scroll to top
+            var section = $("section[data-drive-id='" + drive + "']");
+            if (triggeredBy !== 'scroll') {
+                window.scrollTo(0, section.offset().top)
+            }
         });
     });
 });

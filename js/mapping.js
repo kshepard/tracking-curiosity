@@ -50,7 +50,7 @@
                 })
             }),
             selectControl = new OpenLayers.Control.SelectFeature(driveLayer, {
-                onSelect: function (d) { $(document).trigger('drive-change', [d.data.drive, d.data, d.geometry.x, d.geometry.y]); }
+                onSelect: function (d) { $(document).trigger('drive-change', [d.data.drive, d.data, d.geometry.x, d.geometry.y, 'map']); }
             }),
             markers = new OpenLayers.Layer.Markers('Markers'),
             markerSize = new OpenLayers.Size(32, 32),
