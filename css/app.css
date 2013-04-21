@@ -23,7 +23,7 @@ html, body {
 		height: 200px;
 		bottom: 20px;
 		right: 20px;
-                background: rgba(0,0,0,.35);
+                background: rgba(0,0,0,.55);
 	}
 	
 .scroll-pane {
@@ -46,7 +46,7 @@ html, body {
 			margin-top: 33.33%;
 		}
 	.scroll-pane section.active {
-		background: rgba(0,0,0,.35);
+		background: rgba(0,0,0,.55);
 		text-shadow: none;
 		opacity: 1;
 		color: white;
