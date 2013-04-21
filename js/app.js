@@ -34,6 +34,58 @@ $(function(){
   	    offset: '33.33%'
   	});
 
+        // initialize chart
+        var margin = {top: 20, right: 20, bottom: 30, left: 40},
+        width = 400 - margin.left - margin.right,
+        height = 200 - margin.top - margin.bottom;
+
+        var x = d3.scale.ordinal()
+            .rangeRoundBands([0, width], .1);
+
+        var y = d3.scale.linear()
+            .range([height, 0]);
+
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left");
+
+        yAxis.tickValues([0, -10, -20]);
+
+        var svg = d3.select(".graph").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        var data = [];
+        for (var i in drives) {
+            drives[i].elevation = parseFloat(drives[i].properties.elevation);
+            drives[i].driveId = drives[i].properties.drive;
+            data.push(drives[i]);
+        }
+
+        x.domain(data.map(function(d) { return d.driveId; }));
+        y.domain([-20, 0]);
+
+        svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis)
+            .append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end");
+
+        svg.selectAll(".bar")
+            .data(data)
+            .enter().append("rect")
+            .attr("class", function(d) { return 'bar' + parseInt(d.elevation); })
+            .attr("x", function(d) { return x(d.driveId); })
+            .attr("width", x.rangeBand())
+            .attr("y", function(d) { return y(d.elevation); })
+            .attr("height", function(d) { return height - y(d.elevation); });
+
+
         // listen for 'drive-change' events
         $(document).bind('drive-change', function (e, drive, data, lon, lat) {
         });

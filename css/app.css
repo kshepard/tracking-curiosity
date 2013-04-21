@@ -19,8 +19,8 @@ html, body {
 	}
 	.graph {
 		position: absolute;
-		width: 300px;
-		height: 180px;
+		width: 400px;
+		height: 200px;
 		background: #666;
 		bottom: 20px;
 		right: 20px;
@@ -55,3 +55,44 @@ html, body {
 			margin-top: 0;
 			color: white;
 		}
+
+
+/* bar chart */
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar0 {
+  fill: rgb(255, 255, 204);
+}
+
+.bar-1  {
+  fill: rgb(199, 233, 180);
+}
+
+.bar-2 {
+  fill: rgb(127, 205, 187);
+}
+
+.bar-3, .bar-4, .bar-5, .bar-6, .bar-7, .bar-8, .bar-9, .bar-10, .bar-11  {
+  fill: rgb(65, 182, 196);
+}
+
+.bar-12, .bar-13, .bar-14  {
+  fill: rgb(29, 145, 192);
+}
+
+.bar-15, .bar-16, .bar-17  {
+  fill: rgb(34, 94, 168);
+}
+
+.bar-18, .bar-19, .bar-20  {
+  fill: rgb(12, 44, 132);
+}
+
+.x.axis path {
+  display: none;
+}
