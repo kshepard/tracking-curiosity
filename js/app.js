@@ -2,6 +2,7 @@ $(function(){
     // build drive sections
     $.getJSON('data/drive.json', function (data) {
         var drives = {};
+        var noScroll = false;
         
         $.each(data.features, function (i, feature) {
             drives[feature.properties.drive] = feature;
@@ -28,7 +29,9 @@ $(function(){
             var driveId = $active.data('drive-id');
             if (driveId !== undefined) {
                 var feature = drives[driveId];
-                $(document).trigger('drive-change', [driveId, feature.properties, feature.geometry.coordinates[0], feature.geometry.coordinates[1], 'scroll']);
+                if (!noScroll) {
+                    $(document).trigger('drive-change', [driveId, feature.properties, feature.geometry.coordinates[0], feature.geometry.coordinates[1], 'scroll']);
+                }
             }
 	}, {
   	    offset: '33.33%'
@@ -104,7 +107,13 @@ $(function(){
             // scroll to top
             var section = $("section[data-drive-id='" + drive + "']");
             if (triggeredBy !== 'scroll') {
-                window.scrollTo(0, section.offset().top)
+                noScroll = true;
+                window.scrollTo(0, section.offset().top);
+
+                // quick hack to make sure scrolling isn't triggered like crazy
+                setTimeout(function () {
+                    noScroll = false;
+                }, 500);
             }
         });
     });
