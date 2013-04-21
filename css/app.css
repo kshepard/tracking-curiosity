@@ -21,9 +21,9 @@ html, body {
 		position: absolute;
 		width: 400px;
 		height: 200px;
-		background: #666;
 		bottom: 20px;
 		right: 20px;
+                background: rgba(0,0,0,.35);
 	}
 	
 .scroll-pane {
