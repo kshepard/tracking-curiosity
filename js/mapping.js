@@ -49,8 +49,6 @@
         map.addLayers([googlemars, hirise, trackLayer, driveLayer]);
         map.zoomToExtent( mapBounds.transform(map.displayProjection, map.projection ) );
         map.addControl(new OpenLayers.Control.ZoomPanel());
-        map.addControl(new OpenLayers.Control.MouseDefaults());
-        map.addControl(new OpenLayers.Control.KeyboardDefaults());        
         map.addControl(new OpenLayers.Control.Navigation({ zoomWheelEnabled: false }));
         map.setCenter(new OpenLayers.LonLat(15299900, -511700), 17);
     }
