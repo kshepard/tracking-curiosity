@@ -1,19 +1,59 @@
+// this code, data, and tiles were quickly cobbled together by viewing the source of:
+// http://curiosityrover.com/rovermap1.html -- thanks Joe Knapp! (jmknapp@gmail.com)
 (function () {
-    var map;
-
     var init = function () {
-        map = new OpenLayers.Map('map', { controls: [] });
-        map.addControl(new OpenLayers.Control.LayerSwitcher());
+        var mapBounds = new OpenLayers.Bounds( 137.380794, -4.64535890429, 137.465011675, -4.53738741241),
+            getTileURL = function (bounds) {
+                var res = this.map.getResolution(),
+                    x = Math.round((bounds.left - this.maxExtent.left) / (res * this.tileSize.w)),
+                    y = Math.round((bounds.bottom - this.tileOrigin.lat) / (res * this.tileSize.h)),
+                    z = this.map.getZoom();
+
+                if (mapBounds.intersectsBounds(bounds) && (z >= 11) && (z <= 18)) {
+                    return this.url + z + '/' + x + '/' + y + '.' + this.type;
+                }
+                return 'http://www.maptiler.org/img/none.png';
+            },
+            googlemarsOptions = { type: G_MARS_VISIBLE_MAP, sphericalMercator: true, numZoomLevels: 19},
+            hiriseOptions = { type: 'png', getURL: getTileURL, alpha: false, isBaseLayer: false },
+            mapOptions = {
+                controls: [],
+                projection: new OpenLayers.Projection('EPSG:900913'),
+                displayProjection: new OpenLayers.Projection('EPSG:4326'),
+                units: 'm',
+                maxResolution: 156543.0339,
+                maxExtent: new OpenLayers.Bounds(-20037508, -20037508, 20037508, 20037508.34)
+            },
+            map = new OpenLayers.Map('map', mapOptions),
+            googlemars = new OpenLayers.Layer.Google('Google Mars', googlemarsOptions),
+            hirise = new OpenLayers.Layer.TMS('HiRISE', 'https://s3.amazonaws.com/GaleMap1/trans/', hiriseOptions),
+            trackStyle = new OpenLayers.StyleMap(OpenLayers.Util.applyDefaults({
+                fill: true, fillColor: 'black', fillOpacity: 1.0, strokeDashstyle: 'solid', strokeOpacity: 0.6, strokeColor: 'blue', strokeWidth: 4
+            }, OpenLayers.Feature.Vector.style['default'])),
+            trackLayer = new OpenLayers.Layer.Vector("Track", {
+                strategies: [new OpenLayers.Strategy.Fixed()],
+                styleMap: trackStyle,
+                protocol: new OpenLayers.Protocol.HTTP({
+                    url: "data/track.json",
+                    format: new OpenLayers.Format.GeoJSON()
+                })
+            }),
+            driveLayer = new OpenLayers.Layer.Vector("Drive", {
+                strategies: [new OpenLayers.Strategy.Fixed()],
+                protocol: new OpenLayers.Protocol.HTTP({
+                    url: "data/drive.json",
+                    format: new OpenLayers.Format.GeoJSON()
+                })
+            });
+            
+        map.addLayers([googlemars, hirise, trackLayer, driveLayer]);
+        map.zoomToExtent( mapBounds.transform(map.displayProjection, map.projection ) );
         map.addControl(new OpenLayers.Control.ZoomPanel());
+        map.addControl(new OpenLayers.Control.MouseDefaults());
+        map.addControl(new OpenLayers.Control.KeyboardDefaults());        
         map.addControl(new OpenLayers.Control.Navigation({ zoomWheelEnabled: false }));
-        
-        var gmv = new OpenLayers.Layer.Google("Visible", { type: G_MARS_VISIBLE_MAP });
-        var gmi = new OpenLayers.Layer.Google("Infrared", { type: G_MARS_INFRARED_MAP });
-        var gme = new OpenLayers.Layer.Google("Elevation", { type: G_MARS_ELEVATION_MAP });
-        map.addLayers([gmv, gmi, gme]);
-        
-        map.setCenter(new OpenLayers.LonLat(10.2, 48.9), 5);
+        map.setCenter(new OpenLayers.LonLat(15299900, -511700), 17);
     }
 
     $(document).ready(init);
-}())
+}());
