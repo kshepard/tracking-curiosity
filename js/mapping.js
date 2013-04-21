@@ -44,13 +44,27 @@
                     url: "data/drive.json",
                     format: new OpenLayers.Format.GeoJSON()
                 })
-            });
+            }),
+            selectControl = new OpenLayers.Control.SelectFeature(driveLayer, {
+                onSelect: function (d) { $(document).trigger('drive-change', [d.data.drive, d.data, d.geometry.x, d.geometry.y]); }
+            }),
+            markers = new OpenLayers.Layer.Markers('Markers'),
+            markerSize = new OpenLayers.Size(32, 32),
+            markerOffset = new OpenLayers.Pixel(-(markerSize.w / 2), -markerSize.h + 5),
+            markerIcon = new OpenLayers.Icon('img/marker-curiosity.png', markerSize, markerOffset);
             
-        map.addLayers([googlemars, hirise, trackLayer, driveLayer]);
+        map.addLayers([googlemars, hirise, trackLayer, driveLayer, markers]);
         map.zoomToExtent( mapBounds.transform(map.displayProjection, map.projection ) );
         map.addControl(new OpenLayers.Control.ZoomPanel());
         map.addControl(new OpenLayers.Control.Navigation({ zoomWheelEnabled: false }));
+        map.addControl(selectControl);
+        selectControl.activate();
         map.setCenter(new OpenLayers.LonLat(15299900, -511700), 17);
+
+        // listen for 'drive-change' events
+        $(document).bind('drive-change', function (e, drive, data, lon, lat) {
+            markers.addMarker(new OpenLayers.Marker(new OpenLayers.LonLat(lon, lat), markerIcon));
+        });        
     }
 
     $(document).ready(init);

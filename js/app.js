@@ -6,6 +6,10 @@ $(function(){
   		offset: '33.33%'
   	});
 
+    // listen for 'drive-change' events
+    $(document).bind('drive-change', function (e, drive, data, lon, lat) {
+        console.log('drive-change received in app.js: ', drive);
+    });
 
     // build drive sections
     $.getJSON('data/drive.json', function (data) {
