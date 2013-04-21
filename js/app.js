@@ -79,15 +79,27 @@ $(function(){
         svg.selectAll(".bar")
             .data(data)
             .enter().append("rect")
-            .attr("class", function(d) { return 'bar' + parseInt(d.elevation); })
+            .attr("class", function(d) { return 'bar' + parseInt(d.elevation, 10); })
+            .attr("data-drive-id", function(d) { return d.driveId; })
+            .attr("data-elevation", function(d) { return d.elevation; })
             .attr("x", function(d) { return x(d.driveId); })
             .attr("width", x.rangeBand())
             .attr("y", function(d) { return y(d.elevation); })
-            .attr("height", function(d) { return height - y(d.elevation); });
-
+            .attr("height", function(d) { return height - y(d.elevation); })
+            .on('click', function(e) {
+                $(document).trigger('drive-change', [e.driveId, e.properties, e.geometry.coordinates[0], e.geometry.coordinates[1]]);                
+            });
 
         // listen for 'drive-change' events
         $(document).bind('drive-change', function (e, drive, data, lon, lat) {
+            // color the chart
+            $('rect').each(function(i, r) {
+                if (parseInt(drive, 10) === $(r).data('drive-id')) {
+                    $(r).attr('class', 'selected');
+                } else {
+                    $(r).attr('class', 'bar' + parseInt($(r).data('elevation'), 10));
+                }
+            });
         });
     });
 });

@@ -69,6 +69,18 @@ g text {
   fill: white;    
 }
 
+g rect {
+  cursor: pointer;
+}
+
+g rect:hover {
+  fill: grey;
+}
+
+g rect.selected {
+  fill: red;
+}
+
 .bar0 {
   fill: rgb(255, 255, 204);
 }
